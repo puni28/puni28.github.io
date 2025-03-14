@@ -114,7 +114,11 @@ const HeroSection = () => {
             <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-secondary to-secondary/50 border border-border/40 shadow-xl">
               <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(to_bottom,white,rgba(255,255,255,0.5))]"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-5xl font-bold text-foreground/80">SP</div>
+                {/* <div className="text-5xl font-bold text-foreground/80">SP</div> */}
+                <img src='src\images\cropped.JPG'
+                alt='Your Image'
+                className='w-full h-full object-cover'
+                />
               </div>
             </div>
           </div>

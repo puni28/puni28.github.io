@@ -85,11 +85,11 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden flex items-center"
+            className="md:hidden flex items-center fixed top-4 right-4 z-50"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-6 w-6 text-white" />
             ) : (
               <Menu className="h-6 w-6" />
             )}
