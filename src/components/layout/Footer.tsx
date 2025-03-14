@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, PhoneCall } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t py-12">
+    <footer className="bg-card border-t border-border py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t">
+        <div className="mt-8 pt-8 border-t border-border">
           <p className="text-center text-sm text-muted-foreground">
             © {new Date().getFullYear()} Sai Puneeth Thummaluru. All rights reserved.
           </p>
