@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowDown, ChevronRight } from 'lucide-react';
 import AnimatedSeparator from '../ui/AnimatedSeparator';
-import myImage from '../../images/cropped.jpg';
+import myImage from '../../../public/assets/images/puneeth.jpg';
 
 const HeroSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
