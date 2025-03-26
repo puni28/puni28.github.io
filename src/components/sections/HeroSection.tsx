@@ -1,4 +1,4 @@
-
+// import croppedimage from '../../images/cropped.JPG';
 import React, { useEffect, useRef } from 'react';
 import { ArrowDown, ChevronRight } from 'lucide-react';
 import AnimatedSeparator from '../ui/AnimatedSeparator';
@@ -115,7 +115,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(to_bottom,white,rgba(255,255,255,0.5))]"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 {/* <div className="text-5xl font-bold text-foreground/80">SP</div> */}
-                <img src='src\images\cropped.JPG'
+                <img src='/cropped.JPG'
                 alt='Your Image'
                 className='w-full h-full object-cover'
                 />
