@@ -3,6 +3,9 @@ import React, { useRef, useState } from 'react';
 import AnimatedSeparator from '../ui/AnimatedSeparator';
 import { Send, Mail, PhoneCall, Linkedin, Github, CheckCircle } from 'lucide-react';
 import { toast } from "sonner";
+import emailjs from "emailjs-com";
+import { set } from 'date-fns';
+import { error } from 'console';
 
 const ContactSection = () => {
   const [formState, setFormState] = useState({
@@ -25,12 +28,17 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    emailjs.sendForm(
+      'service_o5luq5q',
+      'template_mmgklk5',
+      formRef.current!,
+      'YDxsfHshBO7TasqKB'
+    )
+    .then(() => {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      
-      // Reset form after submission
+      setIsSubmitted(true); 
+      toast.success("Message sent successfully! I'll get back to you soon."); 
+
       if (formRef.current) {
         formRef.current.reset();
       }
@@ -40,14 +48,16 @@ const ContactSection = () => {
         email: '',
         message: ''
       });
-      
-      toast.success("Message sent successfully! I'll get back to you soon.");
+      setTimeout(() => setIsSubmitted(false), 3000);
+    })
+    .catch((error) => {
+      setIsSubmitting(false);
+      toast.error("Something went wrong. Please try again later.");
+      console.error("EmailJS Error:", error);
+    });
 
-      // Reset submitted state after a while
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 3000);
-    }, 1500);
+    // Simulate form submission
+    
   };
 
   return (
